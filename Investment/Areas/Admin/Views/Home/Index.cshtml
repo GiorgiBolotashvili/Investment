@@ -1,0 +1,44 @@
+﻿@model IQueryable<ServiceItem>
+@{
+    string strTitle = "ადმინისტრატორის პანელი";
+    ViewBag.Title = strTitle;
+}
+
+<div>
+    <h2>@strTitle</h2>
+    <div>
+        <h3>ჩვენი პროექტები</h3>
+        <div class="div-box">
+            <a asp-area="Admin" asp-controller="ServiceItems" asp-action="Edit" asp-route-id="">პროექტის დამატება</a>
+        </div>
+        @if (Model.Any())
+        {
+            <div>
+                @foreach (ServiceItem item in Model)
+                {
+                    <div>
+                        <a asp-area="Admin" asp-controller="ServiceItems" asp-action="Edit" asp-route-id="@item.Id">რედაქტირება</a>
+
+                        <form style="display: inline-block;" id="form-@item.Id" asp-area="Admin" asp-controller="ServiceItems" asp-action="Delete" method="post">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <a href="#" onclick="document.getElementById('form-@item.Id').submit();">წაშლა</a>
+                        </form>
+
+                        <a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="@item.Id">@($"{item.Title}")</a>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+    <div class="div-box">
+        <h3>საიტის გვერდის რედაქტირება</h3>
+        <a asp-area="Admin" asp-controller="TextFields" asp-action="Edit" asp-route-codeWord="PageIndex">მთავარი</a>
+        <a asp-area="Admin" asp-controller="TextFields" asp-action="Edit" asp-route-codeWord="PageServices">პროექტები</a>
+        <a asp-area="Admin" asp-controller="TextFields" asp-action="Edit" asp-route-codeWord="PageContacts">საკონტაქტო ინფორმაცია</a>
+    </div>
+    <div class="div-box">
+        <form asp-area="" asp-controller="Account" asp-action="Logout" method="post">
+            <input type="submit" value="გამოსვლა"/>
+        </form>
+    </div>
+</div>
