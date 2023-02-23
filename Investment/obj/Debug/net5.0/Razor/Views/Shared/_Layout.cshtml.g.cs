@@ -19,8 +19,15 @@ using Investment.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "D:\Coding\C#Workspace\ASP.NET\Investment\Investment\Views\_ViewImports.cshtml"
+using Investment.Service;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b2cc410b9a5e95f4cc809646d74ec4e6cd95e638", @"/Views/Shared/_Layout.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f344f4d4b07985ed2f5233331bdca6b8b234f20b", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"67582a36ad0a2cd2a0208a6009e8f98ee703f530", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__Layout : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #line hidden
@@ -49,7 +56,7 @@ using Investment.Models;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("<!DOCTYPE HTML>\r\n<html>\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b2cc410b9a5e95f4cc809646d74ec4e6cd95e6383071", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b2cc410b9a5e95f4cc809646d74ec4e6cd95e6383256", async() => {
                 WriteLiteral("\r\n    ");
 #nullable restore
 #line 4 "D:\Coding\C#Workspace\ASP.NET\Investment\Investment\Views\Shared\_Layout.cshtml"
@@ -79,7 +86,7 @@ Write(await Html.PartialAsync("CssPartial"));
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b2cc410b9a5e95f4cc809646d74ec4e6cd95e6384543", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b2cc410b9a5e95f4cc809646d74ec4e6cd95e6384728", async() => {
                 WriteLiteral("\r\n    <div id=\"page-wrapper\">\r\n        ");
 #nullable restore
 #line 9 "D:\Coding\C#Workspace\ASP.NET\Investment\Investment\Views\Shared\_Layout.cshtml"
