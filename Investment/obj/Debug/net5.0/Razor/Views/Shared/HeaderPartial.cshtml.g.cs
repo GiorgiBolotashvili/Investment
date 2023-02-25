@@ -26,8 +26,22 @@ using Investment.Service;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "D:\Coding\C#Workspace\ASP.NET\Investment\Investment\Views\_ViewImports.cshtml"
+using Investment.Domain.Entities;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "D:\Coding\C#Workspace\ASP.NET\Investment\Investment\Views\_ViewImports.cshtml"
+using Investment.Models.ViewComponents;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d4041aa51d577f7afa12d182abb92b9b8779b0fa", @"/Views/Shared/HeaderPartial.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"67582a36ad0a2cd2a0208a6009e8f98ee703f530", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5b533129cfbb98b4209e408e4f1c4eddad678b06", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_HeaderPartial : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-area", "", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -62,7 +76,7 @@ using Investment.Service;
         {
             WriteLiteral("<div id=\"header-wrapper\">\r\n    <div class=\"container\">\r\n        <div class=\"row\">\r\n            <div class=\"col-12\">\r\n\r\n                <header id=\"header\">\r\n");
             WriteLiteral("                    <nav id=\"nav\">\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d4041aa51d577f7afa12d182abb92b9b8779b0fa5186", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d4041aa51d577f7afa12d182abb92b9b8779b0fa5578", async() => {
                 WriteLiteral("მთავარი");
             }
             );
@@ -82,7 +96,7 @@ using Investment.Service;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d4041aa51d577f7afa12d182abb92b9b8779b0fa6772", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d4041aa51d577f7afa12d182abb92b9b8779b0fa7164", async() => {
                 WriteLiteral("შესრულებული პროექტები");
             }
             );
@@ -108,7 +122,7 @@ using Investment.Service;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d4041aa51d577f7afa12d182abb92b9b8779b0fa8882", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d4041aa51d577f7afa12d182abb92b9b8779b0fa9274", async() => {
                 WriteLiteral("მიმდინარე პროექტები");
             }
             );
@@ -134,7 +148,7 @@ using Investment.Service;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d4041aa51d577f7afa12d182abb92b9b8779b0fa10990", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d4041aa51d577f7afa12d182abb92b9b8779b0fa11382", async() => {
                 WriteLiteral("დაგეგმილი პროექტები");
             }
             );
@@ -160,7 +174,7 @@ using Investment.Service;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d4041aa51d577f7afa12d182abb92b9b8779b0fa13099", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d4041aa51d577f7afa12d182abb92b9b8779b0fa13491", async() => {
                 WriteLiteral("საკონტაქტო ინფორმაცია");
             }
             );

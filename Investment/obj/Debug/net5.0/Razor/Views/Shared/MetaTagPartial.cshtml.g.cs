@@ -20,6 +20,20 @@ using Investment.Models;
 #line hidden
 #nullable disable
 #nullable restore
+#line 4 "D:\Coding\C#Workspace\ASP.NET\Investment\Investment\Views\_ViewImports.cshtml"
+using Investment.Domain.Entities;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "D:\Coding\C#Workspace\ASP.NET\Investment\Investment\Views\_ViewImports.cshtml"
+using Investment.Models.ViewComponents;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 1 "D:\Coding\C#Workspace\ASP.NET\Investment\Investment\Views\Shared\MetaTagPartial.cshtml"
 using Investment.Service;
 
@@ -27,7 +41,7 @@ using Investment.Service;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"805262e55f57452202f4442df755c7a1aa4d65a6", @"/Views/Shared/MetaTagPartial.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"67582a36ad0a2cd2a0208a6009e8f98ee703f530", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5b533129cfbb98b4209e408e4f1c4eddad678b06", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_MetaTagPartial : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998
