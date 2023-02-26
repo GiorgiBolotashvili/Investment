@@ -78,7 +78,7 @@ namespace Investment.Areas.Admin.Controllers
         {
             string fileExtension = Path.GetExtension(file.FileName);
             var  maxFileSize = 2 * 1024 * 1024;
-            string[] fileExtensions = { ".bmp", /*".jpg",*/ ".png", ".gif", ".jpeg" };
+            string[] fileExtensions = { ".bmp", ".jpg", ".png", ".gif", ".jpeg" };
 
             if (!fileExtensions.Contains(fileExtension.ToLower()))
             {

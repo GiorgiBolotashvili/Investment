@@ -50,7 +50,7 @@ namespace Investment
             //ქუქიების აუთენთიფიკაციის დაყენება
             services.ConfigureApplicationCookie(opt =>
             {
-                opt.Cookie.Name = "myCompanyAuth";
+                opt.Cookie.Name = "investemntAuth";
                 opt.Cookie.HttpOnly = true;
                 opt.LoginPath = "/account/login";
                 opt.AccessDeniedPath = "/account/accessdenied"; 

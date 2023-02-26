@@ -54,7 +54,9 @@ namespace Investment.Migrations
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Subtitle = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Text = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    TitleImagePath = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Status = table.Column<byte>(type: "tinyint", nullable: false),
+                    TitleMainImagePath = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    TitleSecondImagePath = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     MetaTitle = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     MetaDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     MetaKeywords = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -74,7 +76,9 @@ namespace Investment.Migrations
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Text = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Subtitle = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    TitleImagePath = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Status = table.Column<byte>(type: "tinyint", nullable: false),
+                    TitleMainImagePath = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    TitleSecondImagePath = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     MetaTitle = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     MetaDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     MetaKeywords = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -194,21 +198,21 @@ namespace Investment.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "3210e1e0-b2c2-11ed-afa1-0242ac120002", "a71ed215-d398-462e-b14d-c1ec3390ad3d", "admin", "ADMIN" });
+                values: new object[] { "3210e1e0-b2c2-11ed-afa1-0242ac120002", "139351a8-01ca-4497-928e-a526df61d318", "admin", "ADMIN" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "3210e564-b2c2-11ed-afa1-0242ac120002", 0, "5fdfa790-6917-4e2e-8c23-4204f308cc5a", "MyEmail@Gmail.com", true, false, null, "MYEMAIL@GMAIL.COM", "ADMIN", "AQAAAAEAACcQAAAAEG7YBehUEyedA4IPTnvOGueyilDWmsKFDfnUo+uLpZAlmvIA5au6cALtusfcWGr+Eg==", null, false, "", false, "admin" });
+                values: new object[] { "3210e564-b2c2-11ed-afa1-0242ac120002", 0, "285fa6c7-fa61-46b4-95f0-82225255608b", "MyEmail@Gmail.com", true, false, null, "MYEMAIL@GMAIL.COM", "ADMIN", "AQAAAAEAACcQAAAAEN9JgxAJmkgYTdgSAJyOmSPzB2qKHI51bEbwuOQcyQaAiwnSexV9dWmAm5C0fQZIrg==", null, false, "", false, "admin" });
 
             migrationBuilder.InsertData(
                 table: "TextFields",
-                columns: new[] { "Id", "CodeWord", "DateAdded", "MetaDescription", "MetaKeywords", "MetaTitle", "Subtitle", "Text", "Title", "TitleImagePath" },
+                columns: new[] { "Id", "CodeWord", "DateAdded", "MetaDescription", "MetaKeywords", "MetaTitle", "Status", "Subtitle", "Text", "Title", "TitleMainImagePath", "TitleSecondImagePath" },
                 values: new object[,]
                 {
-                    { new Guid("3210ebae-b2c2-11ed-afa1-0242ac120002"), "PageIndex", new DateTime(2023, 2, 22, 18, 50, 48, 352, DateTimeKind.Utc).AddTicks(5077), null, null, null, null, "ივსება ადმინისტრატორის მიერ", "მთავარი", null },
-                    { new Guid("3210ee24-b2c2-11ed-afa1-0242ac120002"), "PageServices", new DateTime(2023, 2, 22, 18, 50, 48, 352, DateTimeKind.Utc).AddTicks(6659), null, null, null, null, "ივსება ადმინისტრატორის მიერ", "ჩვენი მომსახურება", null },
-                    { new Guid("59d61ca4-b2c2-11ed-afa1-0242ac120002"), "PageContacts", new DateTime(2023, 2, 22, 18, 50, 48, 352, DateTimeKind.Utc).AddTicks(6687), null, null, null, null, "ივსება ადმინისტრატორის მიერ", "კონტაქტი", null }
+                    { new Guid("3210ebae-b2c2-11ed-afa1-0242ac120002"), "PageIndex", new DateTime(2023, 2, 26, 21, 59, 13, 113, DateTimeKind.Utc).AddTicks(4411), null, null, null, (byte)0, null, "ივსება ადმინისტრატორის მიერ", "მთავარი", null, null },
+                    { new Guid("3210ee24-b2c2-11ed-afa1-0242ac120002"), "PageServices", new DateTime(2023, 2, 26, 21, 59, 13, 113, DateTimeKind.Utc).AddTicks(6092), null, null, null, (byte)0, null, "ივსება ადმინისტრატორის მიერ", "ჩვენი მომსახურება", null, null },
+                    { new Guid("59d61ca4-b2c2-11ed-afa1-0242ac120002"), "PageContacts", new DateTime(2023, 2, 26, 21, 59, 13, 113, DateTimeKind.Utc).AddTicks(6127), null, null, null, (byte)0, null, "ივსება ადმინისტრატორის მიერ", "კონტაქტი", null, null }
                 });
 
             migrationBuilder.InsertData(

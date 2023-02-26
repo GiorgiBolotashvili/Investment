@@ -37,6 +37,9 @@ namespace Investment.Migrations
                     b.Property<string>("MetaTitle")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<byte>("Status")
+                        .HasColumnType("tinyint");
+
                     b.Property<string>("Subtitle")
                         .HasColumnType("nvarchar(max)");
 
@@ -47,7 +50,10 @@ namespace Investment.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("TitleImagePath")
+                    b.Property<string>("TitleMainImagePath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TitleSecondImagePath")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -77,6 +83,9 @@ namespace Investment.Migrations
                     b.Property<string>("MetaTitle")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<byte>("Status")
+                        .HasColumnType("tinyint");
+
                     b.Property<string>("Subtitle")
                         .HasColumnType("nvarchar(max)");
 
@@ -86,7 +95,10 @@ namespace Investment.Migrations
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("TitleImagePath")
+                    b.Property<string>("TitleMainImagePath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TitleSecondImagePath")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -98,7 +110,8 @@ namespace Investment.Migrations
                         {
                             Id = new Guid("3210ebae-b2c2-11ed-afa1-0242ac120002"),
                             CodeWord = "PageIndex",
-                            DateAdded = new DateTime(2023, 2, 22, 18, 50, 48, 352, DateTimeKind.Utc).AddTicks(5077),
+                            DateAdded = new DateTime(2023, 2, 26, 21, 59, 13, 113, DateTimeKind.Utc).AddTicks(4411),
+                            Status = (byte)0,
                             Text = "ივსება ადმინისტრატორის მიერ",
                             Title = "მთავარი"
                         },
@@ -106,7 +119,8 @@ namespace Investment.Migrations
                         {
                             Id = new Guid("3210ee24-b2c2-11ed-afa1-0242ac120002"),
                             CodeWord = "PageServices",
-                            DateAdded = new DateTime(2023, 2, 22, 18, 50, 48, 352, DateTimeKind.Utc).AddTicks(6659),
+                            DateAdded = new DateTime(2023, 2, 26, 21, 59, 13, 113, DateTimeKind.Utc).AddTicks(6092),
+                            Status = (byte)0,
                             Text = "ივსება ადმინისტრატორის მიერ",
                             Title = "ჩვენი მომსახურება"
                         },
@@ -114,7 +128,8 @@ namespace Investment.Migrations
                         {
                             Id = new Guid("59d61ca4-b2c2-11ed-afa1-0242ac120002"),
                             CodeWord = "PageContacts",
-                            DateAdded = new DateTime(2023, 2, 22, 18, 50, 48, 352, DateTimeKind.Utc).AddTicks(6687),
+                            DateAdded = new DateTime(2023, 2, 26, 21, 59, 13, 113, DateTimeKind.Utc).AddTicks(6127),
+                            Status = (byte)0,
                             Text = "ივსება ადმინისტრატორის მიერ",
                             Title = "კონტაქტი"
                         });
@@ -150,7 +165,7 @@ namespace Investment.Migrations
                         new
                         {
                             Id = "3210e1e0-b2c2-11ed-afa1-0242ac120002",
-                            ConcurrencyStamp = "a71ed215-d398-462e-b14d-c1ec3390ad3d",
+                            ConcurrencyStamp = "139351a8-01ca-4497-928e-a526df61d318",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         });
@@ -249,13 +264,13 @@ namespace Investment.Migrations
                         {
                             Id = "3210e564-b2c2-11ed-afa1-0242ac120002",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "5fdfa790-6917-4e2e-8c23-4204f308cc5a",
+                            ConcurrencyStamp = "285fa6c7-fa61-46b4-95f0-82225255608b",
                             Email = "MyEmail@Gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "MYEMAIL@GMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEG7YBehUEyedA4IPTnvOGueyilDWmsKFDfnUo+uLpZAlmvIA5au6cALtusfcWGr+Eg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEN9JgxAJmkgYTdgSAJyOmSPzB2qKHI51bEbwuOQcyQaAiwnSexV9dWmAm5C0fQZIrg==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
