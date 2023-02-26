@@ -1,6 +1,6 @@
 ﻿@model ServiceItem
 @{
-    string strTitle = "Редактировать запись";
+    string strTitle = "რედაქტირება";
     ViewBag.Title = strTitle;
 }
 
@@ -30,6 +30,9 @@
                 <span asp-validation-for="Text"></span>
             </div>
             <div class="div-box">
+                <p class="text-danger">
+                    @ViewBag.ImageFormatError
+                </p>
                 <label asp-for="TitleImagePath"></label>
                 <input type="file" name="titleImageFile" id="titleImageFile" />
                 <div>

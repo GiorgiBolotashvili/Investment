@@ -22,7 +22,7 @@ namespace Investment.Domain.Entities
         [Display(Name = "სრული აღწერა")]
         public virtual string Text { get; set; }
 
-        [Display(Name = "ლოგოს ფოტო")]
+        [Display(Name = "ატვირთეთ ფოტო")]
         public virtual string TitleImagePath { get; set; }
 
         [Display(Name = "დასახელები SEO მეტატეგი")]

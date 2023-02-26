@@ -35,10 +35,17 @@ namespace Investment.Areas.Admin.Controllers
             {
                 if (titleImageFile != null)
                 {
-                    model.TitleImagePath = titleImageFile.FileName;
-                    using (var stream = new FileStream(Path.Combine(hostingEnvironment.WebRootPath, "images/", titleImageFile.FileName), FileMode.Create))
+                    if (IsValidFile(titleImageFile))
                     {
-                        titleImageFile.CopyTo(stream);
+                        model.TitleImagePath = titleImageFile.FileName;
+                        using (var stream = new FileStream(Path.Combine(hostingEnvironment.WebRootPath, "images/", titleImageFile.FileName), FileMode.Create))
+                        {
+                            titleImageFile.CopyTo(stream);
+                        } 
+                    }
+                    else
+                    {
+                        return View(model);
                     }
                 }
                 dataManager.ServiceItems.SaveServiceItem(model);
@@ -52,6 +59,27 @@ namespace Investment.Areas.Admin.Controllers
         {
             dataManager.ServiceItems.DeleteServiceItem(id);
             return RedirectToAction(nameof(HomeController.Index), nameof(HomeController).CutController());
+        }
+
+        private bool IsValidFile(IFormFile file)
+        {
+            string fileExtension = Path.GetExtension(file.FileName);
+            var  maxFileSize = 2 * 1024 * 1024;
+            string[] fileExtensions = { ".bmp", /*".jpg",*/ ".png", ".gif", ".jpeg" };
+
+            if (!fileExtensions.Contains(fileExtension.ToLower()))
+            {
+                // ModelState.AddModelError("titleImageFile", "Invalid file type. only JPG, JPEG, PNG, GIF and BMP files are allowed ");
+                ViewBag.ImageFormatError = "Invalid file type. only JPG, JPEG, PNG, GIF and BMP files are allowed ";
+                return false;
+            }
+            if (file.Length > maxFileSize)
+            {
+              //  ModelState.AddModelError("titleImageFile", "File size cannot exceed 2 MB");
+                ViewBag.ImageFormatError = "File size cannot exceed 2 MB";
+                return false;
+            }
+            return true;
         }
     }
 }
