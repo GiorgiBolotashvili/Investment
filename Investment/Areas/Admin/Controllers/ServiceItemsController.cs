@@ -17,6 +17,7 @@ namespace Investment.Areas.Admin.Controllers
     {
         private readonly DataManager dataManager;
         private readonly IWebHostEnvironment hostingEnvironment;
+        string[] status = { "შესრულებული", "მიმდინარე", "დაგეგმილი" };
         public ServiceItemsController(DataManager dataManager, IWebHostEnvironment hostingEnvironment)
         {
             this.dataManager = dataManager;
@@ -29,21 +30,33 @@ namespace Investment.Areas.Admin.Controllers
             return View(entity);
         }
         [HttpPost]
-        public IActionResult Edit(ServiceItem model, IFormFile titleImageFile)
+        public IActionResult Edit(ServiceItem model, IFormFile titleMainImagePath, IFormFile titleSecondImagePath)
         {
+            bool mainImage = true;
+            bool secondImage = true;
             if (ModelState.IsValid)
             {
-                if (titleImageFile != null)
+                if (titleMainImagePath != null)
                 {
-                    if (IsValidFile(titleImageFile))
+                    if (IsValidFile(titleMainImagePath, true))
                     {
-                        model.TitleImagePath = titleImageFile.FileName;
-                        using (var stream = new FileStream(Path.Combine(hostingEnvironment.WebRootPath, "images/", titleImageFile.FileName), FileMode.Create))
+                        model.TitleMainImagePath = titleMainImagePath.FileName;
+                        using (var stream = new FileStream(Path.Combine(hostingEnvironment.WebRootPath, "images/", titleMainImagePath.FileName), FileMode.Create))
                         {
-                            titleImageFile.CopyTo(stream);
-                        } 
+                            titleMainImagePath.CopyTo(stream);
+                        }
+                        mainImage = false;
                     }
-                    else
+                    if (IsValidFile(titleSecondImagePath, false))
+                    {
+                        model.TitleSecondImagePath = titleSecondImagePath.FileName;
+                        using (var stream = new FileStream(Path.Combine(hostingEnvironment.WebRootPath, "images/", titleSecondImagePath.FileName), FileMode.Create))
+                        {
+                            titleSecondImagePath.CopyTo(stream);
+                        }
+                        secondImage = false;
+                    }
+                    if (mainImage || secondImage)
                     {
                         return View(model);
                     }
@@ -61,7 +74,7 @@ namespace Investment.Areas.Admin.Controllers
             return RedirectToAction(nameof(HomeController.Index), nameof(HomeController).CutController());
         }
 
-        private bool IsValidFile(IFormFile file)
+        private bool IsValidFile(IFormFile file, bool main)
         {
             string fileExtension = Path.GetExtension(file.FileName);
             var  maxFileSize = 2 * 1024 * 1024;
@@ -70,13 +83,27 @@ namespace Investment.Areas.Admin.Controllers
             if (!fileExtensions.Contains(fileExtension.ToLower()))
             {
                 // ModelState.AddModelError("titleImageFile", "Invalid file type. only JPG, JPEG, PNG, GIF and BMP files are allowed ");
-                ViewBag.ImageFormatError = "Invalid file type. only JPG, JPEG, PNG, GIF and BMP files are allowed ";
+                if (main)
+                {
+                    ViewBag.MainImageFormatError = "Invalid file type. only JPG, JPEG, PNG, GIF and BMP files are allowed "; 
+                }
+                else
+                {
+                    ViewBag.SecondImageFormatError = "Invalid file type. only JPG, JPEG, PNG, GIF and BMP files are allowed ";
+                }
                 return false;
             }
             if (file.Length > maxFileSize)
             {
               //  ModelState.AddModelError("titleImageFile", "File size cannot exceed 2 MB");
-                ViewBag.ImageFormatError = "File size cannot exceed 2 MB";
+                if (main)
+                {
+                    ViewBag.MainImageFormatError = "File size cannot exceed 2 MB";
+                }
+                else
+                {
+                    ViewBag.SecondImageFormatError = "File size cannot exceed 2 MB";
+                }
                 return false;
             }
             return true;

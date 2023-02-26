@@ -22,8 +22,14 @@ namespace Investment.Domain.Entities
         [Display(Name = "სრული აღწერა")]
         public virtual string Text { get; set; }
 
-        [Display(Name = "ატვირთეთ ფოტო")]
-        public virtual string TitleImagePath { get; set; }
+        [Display(Name = "პროექტის სტატუსი")]
+        public virtual byte Status { get; set; }
+
+        [Display(Name = "ატვირთე ძირითადი ფოტო")]
+        public virtual string TitleMainImagePath { get; set; }
+
+        [Display(Name = "ატვირთე მეორადი ფოტო")]
+        public virtual string TitleSecondImagePath { get; set; }
 
         [Display(Name = "დასახელები SEO მეტატეგი")]
         public  string MetaTitle { get; set; }

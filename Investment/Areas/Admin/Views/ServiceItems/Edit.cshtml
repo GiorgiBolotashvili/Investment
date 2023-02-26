@@ -11,7 +11,7 @@
         <form asp-area="Admin" asp-controller="ServiceItems" asp-action="Edit" method="post" enctype="multipart/form-data">
             <input type="hidden" asp-for="Id" />
             <input type="hidden" asp-for="DateAdded" />
-            <input type="hidden" asp-for="TitleImagePath" />
+            <input type="hidden" asp-for="TitleMainImagePath" />
 
             <div asp-validation-summary="All"></div>
             <div class="div-box">
@@ -25,18 +25,39 @@
                 <span asp-validation-for="Subtitle"></span>
             </div>
             <div class="div-box">
+                <label asp-for="Status"></label>
+                <input asp-for="Subtitle" />
+                <span asp-validation-for="Subtitle"></span>
+            </div>
+            <div class="frame">
+                <div class="control">
+                    <ej:ComboBox ID="status" Value="შესრულებული" Placeholder="პროექტის სტატუსი" DataTextField="text" Width="100%">
+                    </ej:ComboBox>
+                </div>
+            </div>
+            <div class="div-box">
                 <label asp-for="Text"></label>
                 <textarea asp-for="Text"></textarea>
                 <span asp-validation-for="Text"></span>
             </div>
             <div class="div-box">
                 <p class="text-danger">
-                    @ViewBag.ImageFormatError
+                    @ViewBag.MainImageFormatError
                 </p>
-                <label asp-for="TitleImagePath"></label>
-                <input type="file" name="titleImageFile" id="titleImageFile" />
+                <label asp-for="TitleMainImagePath"></label>
+                <input type="file" name="titleMainImagePath" id="titleMainImagePath" />
                 <div>
-                    <img class="img-block" src="~/images/@Model.TitleImagePath" />
+                    <img class="img-block" src="~/images/@Model.TitleMainImagePath" />
+                </div>
+            </div>
+            <div class="div-box">
+                <p class="text-danger">
+                    @ViewBag.SecondImageFormatError
+                </p>
+                <label asp-for="TitleSecondImagePath"></label>
+                <input type="file" name="titleSecondImagePath" id="titleSecondImagePath" />
+                <div>
+                    <img class="img-block" src="~/images/@Model.TitleSecondImagePath" />
                 </div>
             </div>
             <div class="div-box">

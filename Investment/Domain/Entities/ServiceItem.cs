@@ -8,14 +8,14 @@ namespace Investment.Domain.Entities
 {
     public class ServiceItem : EntityBase
     {
-        [Required(ErrorMessage = "შეავსეთ მომსახურების დასახელება")]
-        [Display(Name = "მომსახურების დასახელება")]
+        [Required(ErrorMessage = "შეიყვანეთ პროექტის დასახელება")]
+        [Display(Name = "პროექტის დასახელება")]
         public override string Title { get; set; }
 
-        [Display(Name = "მომსახურების მოკლე აღწერა")]
+        [Display(Name = "პროექტის მოკლე აღწერა")]
         public override string Subtitle { get; set; }
 
-        [Display(Name = "მომსახურების სრული აღწერა")]
+        [Display(Name = "პროექტის სრული აღწერა")]
         public override string Text { get; set; }
     }
 }
