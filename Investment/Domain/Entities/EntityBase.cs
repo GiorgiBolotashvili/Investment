@@ -25,10 +25,10 @@ namespace Investment.Domain.Entities
         [Display(Name = "პროექტის სტატუსი")]
         public virtual byte Status { get; set; }
 
-        [Display(Name = "ატვირთე ძირითადი ფოტო")]
+        [Display(Name = "მთავარი ფოტო")]
         public virtual string TitleMainImagePath { get; set; }
 
-        [Display(Name = "ატვირთე მეორადი ფოტო")]
+        [Display(Name = "დამატებითი ფოტო")]
         public virtual string TitleSecondImagePath { get; set; }
 
         [Display(Name = "დასახელები SEO მეტატეგი")]

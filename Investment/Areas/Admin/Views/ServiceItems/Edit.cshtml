@@ -25,16 +25,15 @@
                 <span asp-validation-for="Subtitle"></span>
             </div>
             <div class="div-box">
-                <label asp-for="Status"></label>
-                <input asp-for="Subtitle" />
-                <span asp-validation-for="Subtitle"></span>
+                <label asp-for="Status">პროექტის სტატუსი</label>
+                <select name="Status" id="Status">
+                    <option value="1">დასრულებული</option>
+                    <option value="2">მიმდინარე</option>
+                    <option value="3">დაგეგმილი</option>
+                </select>
+                <span asp-validation-for="Status"></span>
             </div>
-            <div class="frame">
-                <div class="control">
-                    <ej:ComboBox ID="status" Value="შესრულებული" Placeholder="პროექტის სტატუსი" DataTextField="text" Width="100%">
-                    </ej:ComboBox>
-                </div>
-            </div>
+
             <div class="div-box">
                 <label asp-for="Text"></label>
                 <textarea asp-for="Text"></textarea>
