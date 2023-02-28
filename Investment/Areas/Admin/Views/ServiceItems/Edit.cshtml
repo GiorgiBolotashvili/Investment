@@ -1,8 +1,6 @@
 ﻿@model ServiceItem
-@{
-    string strTitle = "რედაქტირება";
-    ViewBag.Title = strTitle;
-}
+@{ string strTitle = "რედაქტირება";
+    ViewBag.Title = strTitle; }
 
 <script src="~/js/ckeditor/ckeditor.js"></script>
 <div>
@@ -33,7 +31,12 @@
                 </select>
                 <span asp-validation-for="Status"></span>
             </div>
-
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="IsFavorit" value="true" id="IsFavorit">
+                <label class="form-check-label" asp-for="IsFavorit">
+                    დავამატოთ ფავორიტებში
+                </label>
+            </div>
             <div class="div-box">
                 <label asp-for="Text"></label>
                 <textarea asp-for="Text"></textarea>

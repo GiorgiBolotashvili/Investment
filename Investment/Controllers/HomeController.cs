@@ -18,6 +18,7 @@ namespace Investment.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.IsMainPage = true;
             return View(dataManager.TextFields.GetTextFieldByCodeWord("PageIndex"));
         }
         public IActionResult Contacts()

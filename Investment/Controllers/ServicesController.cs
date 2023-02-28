@@ -1,4 +1,5 @@
 ﻿using Investment.Domain;
+using Investment.Models.ViewComponents;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -16,8 +17,13 @@ namespace Investment.Controllers
             this.dataManager = dataManager;
         }
 
-        public IActionResult Index(Guid id)
+        public IActionResult Index(Guid id, byte status)
         {
+            ViewBag.IsMainPage = false;
+            if (status>0)
+            {
+                return View("Index", dataManager.ServiceItems.GetServiceItems().Where(x=>x.Status==status));
+            }
             if (id != default)
             {
                 return View("Show", dataManager.ServiceItems.GetServiceItemById(id));
@@ -26,5 +32,6 @@ namespace Investment.Controllers
             ViewBag.TextField = dataManager.TextFields.GetTextFieldByCodeWord("PageServices");
             return View(dataManager.ServiceItems.GetServiceItems());
         }
+
     }
 }

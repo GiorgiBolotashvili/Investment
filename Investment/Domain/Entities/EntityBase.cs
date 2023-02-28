@@ -31,6 +31,9 @@ namespace Investment.Domain.Entities
         [Display(Name = "დამატებითი ფოტო")]
         public virtual string TitleSecondImagePath { get; set; }
 
+        [Display(Name = "ფავორიტი პროექტი")]
+        public bool IsFavorit { get; set; }
+
         [Display(Name = "დასახელები SEO მეტატეგი")]
         public  string MetaTitle { get; set; }
 

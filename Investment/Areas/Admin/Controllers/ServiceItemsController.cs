@@ -32,8 +32,6 @@ namespace Investment.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult Edit(ServiceItem model, IFormFile titleMainImagePath, IFormFile titleSecondImagePath)
         {
-            bool mainImage = true;
-            bool secondImage = true;
             if (ModelState.IsValid)
             {
                 if (titleMainImagePath != null)
@@ -45,20 +43,25 @@ namespace Investment.Areas.Admin.Controllers
                         {
                             titleMainImagePath.CopyTo(stream);
                         }
-                        mainImage = false;
                     }
-                    if (IsValidFile(titleSecondImagePath, false))
-                    {
-                        model.TitleSecondImagePath = titleSecondImagePath.FileName;
-                        using (var stream = new FileStream(Path.Combine(hostingEnvironment.WebRootPath, "images/", titleSecondImagePath.FileName), FileMode.Create))
-                        {
-                            titleSecondImagePath.CopyTo(stream);
-                        }
-                        secondImage = false;
-                    }
-                    if (mainImage || secondImage)
+                    else
                     {
                         return View(model);
+                    }
+                    if (titleSecondImagePath != null)
+                    {
+                        if (IsValidFile(titleSecondImagePath, false))
+                        {
+                            model.TitleSecondImagePath = titleSecondImagePath.FileName;
+                            using (var stream = new FileStream(Path.Combine(hostingEnvironment.WebRootPath, "images/", titleSecondImagePath.FileName), FileMode.Create))
+                            {
+                                titleSecondImagePath.CopyTo(stream);
+                            }
+                        }
+                        else
+                        {
+                            return View(model);
+                        } 
                     }
                 }
                 dataManager.ServiceItems.SaveServiceItem(model);

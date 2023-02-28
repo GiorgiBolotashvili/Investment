@@ -4,12 +4,12 @@
             <div class="col-12">
 
                 <header id="header">
-                    <h2 class="navbar-brand"><a href="/" id="logo">@Config.CompanyName</a></h2>
+                    <h2 class="navbar-brand"><a href="/" id="logo">ლ ო გ ო</a></h2>
                     <nav id="nav">
                         <a asp-area="" asp-controller="Home" asp-action="Index">მთავარი</a>
-                        <a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="">შესრულებული პროექტები</a>
-                        <a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="">მიმდინარე პროექტები</a>
-                        <a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="">დაგეგმილი პროექტები</a>
+                        <a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="" asp-route-status="1">შესრულებული პროექტები</a>
+                        <a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="" asp-route-status="2">მიმდინარე პროექტები</a>
+                        <a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="" asp-route-status="3">დაგეგმილი პროექტები</a>
                         <a asp-area="" asp-controller="Home" asp-action="Contacts">საკონტაქტო ინფორმაცია</a>
                     </nav>
                 </header>

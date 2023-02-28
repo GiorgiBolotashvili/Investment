@@ -6,8 +6,13 @@
 </head>
 <body>
     <div id="page-wrapper">
+
         @await Html.PartialAsync("HeaderPartial")
         <div id="main">
+            @if (ViewBag.IsMainPage == null || ViewBag.IsMainPage)
+            {
+                @await Html.PartialAsync("BannerPartial")
+            }
             <div class="container">
                 <div class="row main-row">
                     <div class="col-8 col-12-medium">

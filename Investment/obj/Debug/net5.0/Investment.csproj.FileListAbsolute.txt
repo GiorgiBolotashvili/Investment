@@ -171,5 +171,6 @@ D:\Coding\C#Workspace\ASP.NET\Investment\Investment\bin\Debug\net5.0\runtimes\wi
 D:\Coding\C#Workspace\ASP.NET\Investment\Investment\bin\Debug\net5.0\runtimes\win-x86\native\sni.dll
 D:\Coding\C#Workspace\ASP.NET\Investment\Investment\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\Coding\C#Workspace\ASP.NET\Investment\Investment\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Coding\C#Workspace\ASP.NET\Investment\Investment\obj\Debug\net5.0\Razor\Views\Shared\BannerPartial.cshtml.g.cs
 D:\Coding\C#Workspace\ASP.NET\Investment\Investment\bin\Debug\net5.0\ref\Investment.dll
 D:\Coding\C#Workspace\ASP.NET\Investment\Investment\obj\Debug\net5.0\staticwebassets\Investment.StaticWebAssets.xml

@@ -15,6 +15,6 @@ namespace Investment.Domain.Entities
         public override string Title { get; set; } = "საინფორმაციო გვერდი";
 
         [Display(Name = "სრული აღწერა")]
-        public override string Text { get; set; } = "ივსება ადმინისტრატორის მიერ";
+        public override string Text { get; set; } = "ინფორმაცია კომპანიის საქმიანობის შესახებ";
     }
 }
