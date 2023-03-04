@@ -6,11 +6,11 @@
                 <header id="header">
                     <h2 class="navbar-brand"><a href="/" id="logo">ლ ო გ ო</a></h2>
                     <nav id="nav">
-                        <a asp-area="" asp-controller="Home" asp-action="Index">მთავარი</a>
-                        <a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="" asp-route-status="1">შესრულებული პროექტები</a>
-                        <a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="" asp-route-status="2">მიმდინარე პროექტები</a>
-                        <a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="" asp-route-status="3">დაგეგმილი პროექტები</a>
-                        <a asp-area="" asp-controller="Home" asp-action="Contacts">საკონტაქტო ინფორმაცია</a>
+                        <a asp-area="" asp-controller="Home" asp-action="Index">@SharedResource["Home"].ToString().ToUpper()</a>
+                        <a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="" asp-route-status="1">@SharedResource["Services1"].ToString().ToUpper()</a>
+                        <a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="" asp-route-status="2">@SharedResource["Services2"].ToString().ToUpper()</a>
+                        <a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="" asp-route-status="3">@SharedResource["Services3"].ToString().ToUpper()</a>
+                        <a asp-area="" asp-controller="Home" asp-action="Contacts">@SharedResource["Contacts"].ToString().ToUpper()</a>
                     </nav>
                 </header>
 

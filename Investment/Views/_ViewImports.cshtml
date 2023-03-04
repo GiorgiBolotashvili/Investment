@@ -3,3 +3,10 @@
 @using Investment.Service
 @using Investment.Domain.Entities
 @using Investment.Models.ViewComponents
+@using Microsoft.AspNetCore.Mvc.Rendering
+@using Microsoft.Extensions.Localization
+@using Microsoft.AspNetCore.Localization
+@using Investment
+
+@inject IStringLocalizer<SharedResource> SharedResource
+@inject IHtmlHelper Html

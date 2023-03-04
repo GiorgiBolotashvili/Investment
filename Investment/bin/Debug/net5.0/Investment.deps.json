@@ -321,6 +321,14 @@
         "runtime": {
           "Investment.dll": {}
         },
+        "resources": {
+          "en-US/Investment.resources.dll": {
+            "locale": "en-US"
+          },
+          "ka-GE/Investment.resources.dll": {
+            "locale": "ka-GE"
+          }
+        },
         "compile": {
           "Investment.dll": {}
         }

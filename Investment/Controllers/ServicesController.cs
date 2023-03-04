@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Investment.Controllers
 {
+    [Route("service")]
     public class ServicesController : Controller
     {
         private readonly DataManager dataManager;
@@ -17,6 +18,8 @@ namespace Investment.Controllers
             this.dataManager = dataManager;
         }
 
+        [Route("index")]
+        [Route("")]
         public IActionResult Index(Guid id, byte status)
         {
             ViewBag.IsMainPage = false;

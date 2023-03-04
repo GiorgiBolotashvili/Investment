@@ -1,6 +1,7 @@
 ﻿@model ServiceItem
-@{ string strTitle = "რედაქტირება";
-    ViewBag.Title = strTitle; }
+@{ string strTitle = SharedResource["Edit"];
+    ViewBag.Title = strTitle;
+    int st = Model.Status; }
 
 <script src="~/js/ckeditor/ckeditor.js"></script>
 <div>
@@ -23,19 +24,18 @@
                 <span asp-validation-for="Subtitle"></span>
             </div>
             <div class="div-box">
-                <label asp-for="Status">პროექტის სტატუსი</label>
-                <select name="Status" id="Status">
-                    <option value="1">დასრულებული</option>
-                    <option value="2">მიმდინარე</option>
-                    <option value="3">დაგეგმილი</option>
+                <label asp-for="Status">@SharedResource["Pstatus"]</label>
+                <select asp-for="Status" asp-items="@GetStatusOptions(Model.Status)">
                 </select>
                 <span asp-validation-for="Status"></span>
             </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox"  name="IsFavorit" value="true" id="IsFavorit">
+            <div class="div-box">
                 <label class="form-check-label" asp-for="IsFavorit">
-                    დავამატოთ ფავორიტებში
+                    @SharedResource["AddMotto"]
                 </label>
+                <input asp-for="IsFavorit" class="form-check-input" type="checkbox" name="IsFavorit" value="true" id="IsFavorit">
+                <span asp-validation-for="IsFavorit"></span>
+
             </div>
             <div class="div-box">
                 <label asp-for="Text"></label>
@@ -77,7 +77,7 @@
                 <input asp-for="MetaKeywords" />
                 <span asp-validation-for="MetaKeywords"></span>
             </div>
-            <input type="submit" value="შენახვა" />
+            <input type="submit" value=@SharedResource["Save"] />
         </form>
     </div>
 </div>
@@ -90,3 +90,21 @@
         newCKEdit.updateElement();
     }
 </script>
+
+@functions { public SelectList GetStatusOptions(byte SelectedStatus)
+    {
+        var options = new List<SelectListItem> {
+                new SelectListItem {Value = "1", Text = $"{SharedResource["Complete"]}"},
+                new SelectListItem {Value = "2", Text = $"{SharedResource["Current"]}"},
+                new SelectListItem {Value = "3", Text = $"{SharedResource["Planned"]}"}
+                };
+        foreach (var opt in options)
+        {
+            if (opt.Value ==SelectedStatus.ToString())
+            {
+                opt.Selected = true;
+            }
+        }
+        return new SelectList(options, "Value", "Text");
+    }
+    }

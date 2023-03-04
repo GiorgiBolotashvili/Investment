@@ -3,10 +3,20 @@
                 ViewBag.Description = Model.MetaDescription;
                 ViewBag.Keywords = Model.MetaKeywords; }
 
+@*@{ 
+    var text = SharedResource["Txt"].Value;
+}*@
 
 
 <div>
     <h1>
-        @Html.Raw(Model.Text)
+        @ViewBag.Text
     </h1>
+    <h1>
+        @SharedResource["Home"]
+    </h1>
+
+    <h2>
+        @SharedResource["Txt"].Value
+    </h2>
 </div>

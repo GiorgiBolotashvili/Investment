@@ -32,31 +32,30 @@
                 </section>
 
             </div>
-            @*<div class="col-4 col-12-medium">
+            <div class="col-3 col-12-medium">
+                <div>
+                    @{ 
+                        var viewContext = Html.ViewContext;
+                        var httpContext = viewContext.HttpContext;
+                    }
+                    <label for="language-select">Select language:</label>
+                    <a asp-controller="Language" asp-action="SetLanguage" asp-route-culture="en-US" asp-route-returnUrl=@httpContext.Request.Path>
+                        <img src="~/images/gb.svg" alt="" title="" border="0" width="16" height="16"/>
+                    </a>
+                    <a asp-controller="Language" asp-action="SetLanguage" asp-route-culture="ka-GE" asp-route-returnUrl=@httpContext.Request.Path>
+                        <img src="~/images/ge.svg" alt="" title="" border="0" width="18" height="18"/>
+                    </a>
+                </div>
+            </div>
 
-                <section>
-                    <h2>Something of interest</h2>
-                    <p>
-                        Duis neque nisi, dapibus sed mattis quis, rutrum accumsan sed.
-                        Suspendisse eu varius nibh. Suspendisse vitae magna eget odio amet
-                        mollis justo facilisis quis. Sed sagittis mauris amet tellus gravida
-                        lorem ipsum dolor sit blandit.
-                    </p>
-                    <footer class="controls">
-                        <a href="#" class="button">Oh, please continue ....</a>
-                    </footer>
-                </section>
-
-            </div>*@
         </div>
         <div class="row">
             <div class="col-12">
-
                 <div id="copyright">
                     &copy; @Config.CompanyName. All rights reserved. | Georgia:      <a href="http://html5up.net">@Config.CompanyName</a>
                 </div>
-
             </div>
         </div>
     </div>
 </div>
+
