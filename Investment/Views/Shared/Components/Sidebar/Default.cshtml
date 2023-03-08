@@ -14,10 +14,24 @@
                         <img src="~/images/@entity.TitleMainImagePath" alt="" class="left" />
                     </a>
                     <h4>
-                        @entity.Title
+                        @if (ViewBag.checkEng)
+                        {
+                            @entity.Title;
+                        }
+                        else
+                        {
+                            @entity.TitleGeo;
+                        }
                     </h4>
                     <p>
-                        @entity.Subtitle
+                        @if (ViewBag.checkEng)
+                        {
+                            @entity.Subtitle;
+                        }
+                        else
+                        {
+                            @entity.SubtitleGeo;
+                        }
                     </p>
                 </li>
             }

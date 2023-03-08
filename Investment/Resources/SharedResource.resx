@@ -124,7 +124,10 @@
     <value>Add to motto</value>
   </data>
   <data name="CAddress" xml:space="preserve">
-    <value>Address</value>
+    <value>Address for English</value>
+  </data>
+  <data name="CAddressGeo" xml:space="preserve">
+    <value>Address for Georgian</value>
   </data>
   <data name="CAddressValue" xml:space="preserve">
     <value>Tbilisi, Kazbegi #22</value>
@@ -138,8 +141,20 @@
   <data name="CMailValue" xml:space="preserve">
     <value>contact@gmail.com</value>
   </data>
+  <data name="CMotto" xml:space="preserve">
+    <value>Motto for English</value>
+  </data>
+  <data name="CMottoGeo" xml:space="preserve">
+    <value>Motto for Georgian</value>
+  </data>
+  <data name="CMottoValu" xml:space="preserve">
+    <value>My company's motto</value>
+  </data>
   <data name="CName" xml:space="preserve">
-    <value>Company name</value>
+    <value>Company name for English</value>
+  </data>
+  <data name="CNameGeo" xml:space="preserve">
+    <value>Company name for Georgian</value>
   </data>
   <data name="CNameValue" xml:space="preserve">
     <value>My Company</value>
@@ -173,6 +188,9 @@
   </data>
   <data name="Enter" xml:space="preserve">
     <value>Enter</value>
+  </data>
+  <data name="ETitle" xml:space="preserve">
+    <value>Edit contacts</value>
   </data>
   <data name="Exit" xml:space="preserve">
     <value>Exit</value>

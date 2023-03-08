@@ -4,14 +4,16 @@ using Investment.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Investment.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230308183305__initial_4")]
+    partial class _initial_4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -87,22 +89,13 @@ namespace Investment.Migrations
                     b.Property<string>("CompanyAddress")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CompanyAddressGeo")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("CompanyEmail")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CompanyMotto")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CompanyMottoGeo")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("CompanyName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CompanyNameGeo")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CompanyPhone")
@@ -159,7 +152,7 @@ namespace Investment.Migrations
                         {
                             Id = new Guid("3210ebae-b2c2-11ed-afa1-0242ac120002"),
                             CodeWord = "PageIndex",
-                            DateAdded = new DateTime(2023, 3, 8, 19, 44, 18, 174, DateTimeKind.Utc).AddTicks(3154),
+                            DateAdded = new DateTime(2023, 3, 8, 18, 33, 4, 833, DateTimeKind.Utc).AddTicks(418),
                             IsFavorit = false,
                             Status = (byte)0,
                             Text = "Information about the company's activities",
@@ -169,7 +162,7 @@ namespace Investment.Migrations
                         {
                             Id = new Guid("3210ee24-b2c2-11ed-afa1-0242ac120002"),
                             CodeWord = "PageServices",
-                            DateAdded = new DateTime(2023, 3, 8, 19, 44, 18, 174, DateTimeKind.Utc).AddTicks(6575),
+                            DateAdded = new DateTime(2023, 3, 8, 18, 33, 4, 833, DateTimeKind.Utc).AddTicks(2064),
                             IsFavorit = false,
                             Status = (byte)0,
                             Text = "Information about the company's activities",
@@ -179,7 +172,7 @@ namespace Investment.Migrations
                         {
                             Id = new Guid("59d61ca4-b2c2-11ed-afa1-0242ac120002"),
                             CodeWord = "PageContacts",
-                            DateAdded = new DateTime(2023, 3, 8, 19, 44, 18, 174, DateTimeKind.Utc).AddTicks(6652),
+                            DateAdded = new DateTime(2023, 3, 8, 18, 33, 4, 833, DateTimeKind.Utc).AddTicks(2101),
                             IsFavorit = false,
                             Status = (byte)0,
                             Text = "Information about the company's activities",
@@ -217,7 +210,7 @@ namespace Investment.Migrations
                         new
                         {
                             Id = "3210e1e0-b2c2-11ed-afa1-0242ac120002",
-                            ConcurrencyStamp = "0683ed5c-d5d8-4be8-a2e3-d4e37b99713a",
+                            ConcurrencyStamp = "51ee3542-1916-4c28-bb29-bd2d20cd9000",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         });
@@ -316,13 +309,13 @@ namespace Investment.Migrations
                         {
                             Id = "3210e564-b2c2-11ed-afa1-0242ac120002",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "2c630639-6231-4417-800e-de137cd7b6ae",
+                            ConcurrencyStamp = "508fea4b-8c82-4fca-896b-d2fe92e335e0",
                             Email = "MyEmail@Gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "MYEMAIL@GMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEJA3UMQXp9DlUxaqSpb8vzJ5H2ogz+v2FPsc/8A1fQP50hxLc1cQtb4Pa7PKWUrBdw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEBRcpAr9aQIwBuTDkFOEMLbS8+qiUBgAlvuf73nMir0BhFdJool+yoQuQg116ZMpYg==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,

@@ -1,8 +1,6 @@
 ﻿@model TextField
-@{
-    string strTitle = "ჩანაწერის რედაქტირება";
-    ViewBag.Title = strTitle;
-}
+@{ string strTitle = SharedResource["ETitle"];
+                ViewBag.Title = strTitle; }
 
 <script src="~/js/ckeditor/ckeditor.js"></script>
 <div>
@@ -14,37 +12,59 @@
             <input type="hidden" asp-for="CodeWord" />
 
             <div asp-validation-summary="All"></div>
-            <div class="div-box">
-                <label asp-for="Title"></label>
-                <input asp-for="Title" />
-                <span asp-validation-for="Title"></span>
+            <div class="div-box row">
+                <div class="fa-columns">
+                    <label>@SharedResource["CName"]</label>
+                    <input asp-for="CompanyName" />
+                    <span asp-validation-for="CompanyName"></span>
+                </div>
+                <div class="fa-columns">
+                    <label>@SharedResource["CNameGeo"]</label>
+                    <input asp-for="CompanyNameGeo" />
+                    <span asp-validation-for="CompanyNameGeo"></span>
+                </div>
             </div>
             <div class="div-box">
-                <label asp-for="Text"></label>
-                <textarea asp-for="Text"></textarea>
-                <span asp-validation-for="Text"></span>
+
+            </div>
+            <div class="div-box row">
+                <div class="fa-columns">
+                    <label>@SharedResource["CAddress"]</label>
+                    <input asp-for="CompanyAddress" />
+                    <span asp-validation-for="CompanyAddress"></span>
+                </div>
+                <div class="fa-columns">
+                    <label>@SharedResource["CAddressGeo"]</label>
+                    <input asp-for="CompanyAddressGeo" />
+                    <span asp-validation-for="CompanyAddressGeo"></span>
+                </div>
             </div>
             <div class="div-box">
-                <label asp-for="Status"></label>
-                <textarea asp-for="Status"></textarea>
-                <span asp-validation-for="Status"></span>
+
+            </div>
+            <div class="div-box row">
+                <div class="fa-columns">
+                    <label>@SharedResource["CMotto"]</label>
+                    <input asp-for="CompanyMotto" />
+                    <span asp-validation-for="CompanyMotto"></span>
+                </div>
+                <div class="fa-columns">
+                    <label>@SharedResource["CMottoGeo"]</label>
+                    <input asp-for="CompanyMottoGeo" />
+                    <span asp-validation-for="CompanyMottoGeo"></span>
+                </div>
             </div>
             <div class="div-box">
-                <label asp-for="MetaTitle"></label>
-                <input asp-for="MetaTitle" />
-                <span asp-validation-for="MetaTitle"></span>
+                <label>@SharedResource["CMail"]</label>
+                <input asp-for="CompanyEmail" />
+                <span asp-validation-for="CompanyEmail"></span>
             </div>
             <div class="div-box">
-                <label asp-for="MetaDescription"></label>
-                <input asp-for="MetaDescription" />
-                <span asp-validation-for="MetaDescription"></span>
+                <label>@SharedResource["CPhone"]</label>
+                <input asp-for="CompanyPhone" />
+                <span asp-validation-for="CompanyPhone"></span>
             </div>
-            <div class="div-box">
-                <label asp-for="MetaKeywords"></label>
-                <input asp-for="MetaKeywords" />
-                <span asp-validation-for="MetaKeywords"></span>
-            </div>
-            <input type="submit" value="Сохранить" />
+            <input type="submit" value=@SharedResource["Save"] />
         </form>
     </div>
 </div>

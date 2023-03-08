@@ -34,7 +34,7 @@ namespace Investment.Controllers
                 ViewBag.checkEng = false;
 
 
-            ViewBag.IsMainPage = false;
+         //   ViewBag.IsMainPage = false;
             if (status>0)
             {
                 return View("Index", dataManager.ServiceItems.GetServiceItems().Where(x=>x.Status==status));

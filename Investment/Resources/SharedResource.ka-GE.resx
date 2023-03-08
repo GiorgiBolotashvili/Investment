@@ -124,7 +124,10 @@
     <value>ფავორიტებში დამატება</value>
   </data>
   <data name="CAddress" xml:space="preserve">
-    <value>მისამართი</value>
+    <value>მისამართი ინგლისურად</value>
+  </data>
+  <data name="CAddressGeo" xml:space="preserve">
+    <value>მისამართი ქართულად</value>
   </data>
   <data name="CAddressValue" xml:space="preserve">
     <value>თბილისი, ალ.ყაზბეგის #22</value>
@@ -138,8 +141,20 @@
   <data name="CMailValue" xml:space="preserve">
     <value>contact@gmail.com</value>
   </data>
+  <data name="CMotto" xml:space="preserve">
+    <value>დევიზი ინგლისურად</value>
+  </data>
+  <data name="CMottoGeo" xml:space="preserve">
+    <value>დევიზი ქართულად</value>
+  </data>
+  <data name="CMottoValue" xml:space="preserve">
+    <value>ჩემი კომპანიის დევიზი</value>
+  </data>
   <data name="CName" xml:space="preserve">
-    <value>დასახელება</value>
+    <value>დასახელება ინგლისურად </value>
+  </data>
+  <data name="CNameGeo" xml:space="preserve">
+    <value>დასახელება ქართულად</value>
   </data>
   <data name="CNameValue" xml:space="preserve">
     <value>ჩემი კომპანია</value>
@@ -173,6 +188,9 @@
   </data>
   <data name="Enter" xml:space="preserve">
     <value>შესვლა</value>
+  </data>
+  <data name="ETitle" xml:space="preserve">
+    <value>კონტაქტების რედაქტირება</value>
   </data>
   <data name="Exit" xml:space="preserve">
     <value>გამოსვლა</value>

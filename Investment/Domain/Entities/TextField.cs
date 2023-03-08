@@ -29,5 +29,15 @@ namespace Investment.Domain.Entities
 
         [Display(Name = "Full description")]
         public override string Text { get; set; } = "Information about the company's activities";
+
+        public  string CompanyName { get; set; } 
+        public  string CompanyNameGeo { get; set; } 
+        public  string CompanyAddress { get; set; } 
+        public  string CompanyAddressGeo { get; set; } 
+        public  string CompanyMotto { get; set; } 
+        public  string CompanyMottoGeo { get; set; }
+        public string CompanyEmail { get; set; }
+        public string CompanyPhone { get; set; }
+
     }
 }
