@@ -172,8 +172,6 @@ D:\Coding\C#Workspace\ASP.NET\Investment\Investment\bin\Debug\net5.0\runtimes\wi
 D:\Coding\C#Workspace\ASP.NET\Investment\Investment\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\Coding\C#Workspace\ASP.NET\Investment\Investment\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\Coding\C#Workspace\ASP.NET\Investment\Investment\obj\Debug\net5.0\Razor\Views\Shared\BannerPartial.cshtml.g.cs
-D:\Coding\C#Workspace\ASP.NET\Investment\Investment\bin\Debug\net5.0\ref\Investment.dll
-D:\Coding\C#Workspace\ASP.NET\Investment\Investment\obj\Debug\net5.0\staticwebassets\Investment.StaticWebAssets.xml
 D:\Coding\C#Workspace\ASP.NET\Investment\Investment\obj\Debug\net5.0\Investment.csproj.GenerateResource.cache
 D:\Coding\C#Workspace\ASP.NET\Investment\Investment\obj\Debug\net5.0\Investment.Resources.SharedResource.en-US.resources
 D:\Coding\C#Workspace\ASP.NET\Investment\Investment\obj\Debug\net5.0\Investment.Resources.SharedResource.ka-GE.resources
@@ -183,3 +181,5 @@ D:\Coding\C#Workspace\ASP.NET\Investment\Investment\obj\Debug\net5.0\en-US\Inves
 D:\Coding\C#Workspace\ASP.NET\Investment\Investment\obj\Debug\net5.0\ka-GE\Investment.resources.dll
 D:\Coding\C#Workspace\ASP.NET\Investment\Investment\obj\Debug\net5.0\Razor\Views\Shared\LocalizePartial.cshtml.g.cs
 D:\Coding\C#Workspace\ASP.NET\Investment\Investment\obj\Debug\net5.0\Investment.Resources.SharedResource.resources
+D:\Coding\C#Workspace\ASP.NET\Investment\Investment\bin\Debug\net5.0\ref\Investment.dll
+D:\Coding\C#Workspace\ASP.NET\Investment\Investment\obj\Debug\net5.0\staticwebassets\Investment.StaticWebAssets.xml

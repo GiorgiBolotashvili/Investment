@@ -20,8 +20,26 @@
                     <a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="@entity.Id">
                         <img src="~/images/@entity.TitleMainImagePath" alt="" class="left" />
                     </a>
-                    <h4>@entity.Title</h4>
-                    <p>@entity.Subtitle</p>
+                    <h4>
+                        @if (ViewBag.checkEng)
+                        {
+                            @entity.Title;
+                        }
+                        else
+                        {
+                            @entity.TitleGeo;
+                        }
+                    </h4>
+                    <p>
+                        @if (ViewBag.checkEng)
+                        {
+                            @entity.Subtitle;
+                        }
+                        else
+                        {
+                            @entity.SubtitleGeo;
+                        }
+                    </p>
                 </li>
             }
         </ul>

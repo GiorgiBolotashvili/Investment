@@ -7,10 +7,24 @@
 
 <div>
     <h2>
-        @Model.Title
+        @if (ViewBag.checkEng)
+        {
+            @Model.Title;
+        }
+        else
+        {
+            @Model.TitleGeo;
+        }
     </h2>
     <h2>
-        @Model.Subtitle
+        @if (ViewBag.checkEng)
+        {
+            @Model.Subtitle;
+        }
+        else
+        {
+            @Model.SubtitleGeo;
+        }
     </h2>
     <div>
         <img class="img-block" src="~/images/@Model.TitleMainImagePath" />
@@ -20,5 +34,13 @@
     </div>
 </div>
 <div>
-    @Html.Raw(Model.Text)
+    @if (ViewBag.checkEng)
+    {
+        @Html.Raw(Model.Text)
+    }
+    else
+    {
+       @Html.Raw(Model.TextGeo)
+    }
+    
 </div>

@@ -126,14 +126,23 @@
   <data name="CAddress" xml:space="preserve">
     <value>Address</value>
   </data>
+  <data name="CAddressValue" xml:space="preserve">
+    <value>Tbilisi, Kazbegi #22</value>
+  </data>
   <data name="CInfo" xml:space="preserve">
     <value>Contact info</value>
   </data>
   <data name="CMail" xml:space="preserve">
     <value>E-Mail</value>
   </data>
+  <data name="CMailValue" xml:space="preserve">
+    <value>contact@gmail.com</value>
+  </data>
   <data name="CName" xml:space="preserve">
     <value>Company name</value>
+  </data>
+  <data name="CNameValue" xml:space="preserve">
+    <value>My Company</value>
   </data>
   <data name="Complete" xml:space="preserve">
     <value>Completed</value>
@@ -141,11 +150,14 @@
   <data name="CompName" xml:space="preserve">
     <value>My Company</value>
   </data>
-  <data name="Conacts" xml:space="preserve">
+  <data name="Contact" xml:space="preserve">
     <value>Contact info</value>
   </data>
   <data name="CPhone" xml:space="preserve">
     <value>Phone</value>
+  </data>
+  <data name="CPhoneValue" xml:space="preserve">
+    <value>+599999999</value>
   </data>
   <data name="Current" xml:space="preserve">
     <value>Current</value>
@@ -168,6 +180,9 @@
   <data name="Home" xml:space="preserve">
     <value>Home</value>
   </data>
+  <data name="Language" xml:space="preserve">
+    <value>Select language</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>Login</value>
   </data>
@@ -182,6 +197,9 @@
   </data>
   <data name="Password" xml:space="preserve">
     <value>Password</value>
+  </data>
+  <data name="PError" xml:space="preserve">
+    <value>Enter a project name</value>
   </data>
   <data name="PFullInfoEng" xml:space="preserve">
     <value>Full description of the project for English</value>
@@ -202,10 +220,10 @@
     <value>Our projects</value>
   </data>
   <data name="PShortInfoEng" xml:space="preserve">
-    <value>Short description of the project for English</value>
+    <value>Short description for English</value>
   </data>
   <data name="PShortInfoGeo" xml:space="preserve">
-    <value>Short description of the project for Georgian</value>
+    <value>Short description for Georgian</value>
   </data>
   <data name="Pstatus" xml:space="preserve">
     <value>Project Status</value>
@@ -229,6 +247,9 @@
     <value>Planned projects</value>
   </data>
   <data name="Top" xml:space="preserve">
+    <value>Top Project</value>
+  </data>
+  <data name="Tops" xml:space="preserve">
     <value>Top Projects</value>
   </data>
   <data name="Txt1" xml:space="preserve">

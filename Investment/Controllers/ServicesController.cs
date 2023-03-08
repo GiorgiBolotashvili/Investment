@@ -1,8 +1,10 @@
 ﻿using Investment.Domain;
 using Investment.Models.ViewComponents;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -12,9 +14,11 @@ namespace Investment.Controllers
     public class ServicesController : Controller
     {
         private readonly DataManager dataManager;
+        private readonly IStringLocalizer _localizer;
 
-        public ServicesController(DataManager dataManager)
+        public ServicesController(IStringLocalizerFactory factory, DataManager dataManager)
         {
+            _localizer = factory.Create(typeof(SharedResource));
             this.dataManager = dataManager;
         }
 
@@ -22,6 +26,14 @@ namespace Investment.Controllers
         [Route("")]
         public IActionResult Index(Guid id, byte status)
         {
+            if (CultureInfo.CurrentCulture.Name =="en-US")
+            {
+                ViewBag.checkEng = true;
+            }
+            else
+                ViewBag.checkEng = false;
+
+
             ViewBag.IsMainPage = false;
             if (status>0)
             {

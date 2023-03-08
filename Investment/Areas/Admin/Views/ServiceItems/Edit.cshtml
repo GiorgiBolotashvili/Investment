@@ -13,15 +13,35 @@
             <input type="hidden" asp-for="TitleMainImagePath" />
 
             <div asp-validation-summary="All"></div>
-            <div class="div-box">
-                <label asp-for="Title"></label>
-                <input asp-for="Title" />
-                <span asp-validation-for="Title"></span>
+            <div class="div-box row">
+                <div class="fa-columns">
+                    <label >@SharedResource["PNameEng"] </label>
+                    <input asp-for="Title" />
+                    <span asp-validation-for="Title"></span>
+                </div>
+                <div class="fa-columns">
+                    <label>@SharedResource["PNameGeo"]</label>
+                    <input asp-for="TitleGeo" />
+                    <span asp-validation-for="TitleGeo"></span>
+                </div>
             </div>
             <div class="div-box">
-                <label asp-for="Subtitle"></label>
-                <input asp-for="Subtitle" />
-                <span asp-validation-for="Subtitle"></span>
+
+            </div>
+            <div class="div-box row">
+                <div class="fa-columns">
+                    <label>@SharedResource["PShortInfoEng"]</label>
+                    <input asp-for="Subtitle" />
+                    <span asp-validation-for="Subtitle"></span>
+                </div>
+                <div class="fa-columns">
+                    <label >@SharedResource["PShortInfoGeo"]</label>
+                    <input asp-for="SubtitleGeo" />
+                    <span asp-validation-for="SubtitleGeo"></span>
+                </div>
+            </div>
+            <div class="div-box">
+
             </div>
             <div class="div-box">
                 <label asp-for="Status">@SharedResource["Pstatus"]</label>
@@ -38,15 +58,20 @@
 
             </div>
             <div class="div-box">
-                <label asp-for="Text"></label>
+                <label >@SharedResource["PFullInfoEng"]</label>
                 <textarea asp-for="Text"></textarea>
                 <span asp-validation-for="Text"></span>
+            </div>
+            <div class="div-box">
+                <label >@SharedResource["PFullInfoGeo"]</label>
+                <textarea asp-for="TextGeo"></textarea>
+                <span asp-validation-for="TextGeo"></span>
             </div>
             <div class="div-box">
                 <p class="text-danger">
                     @ViewBag.MainImageFormatError
                 </p>
-                <label asp-for="TitleMainImagePath"></label>
+                <label asp-for="TitleMainImagePath">@SharedResource["MainPhoto"]</label>
                 <input type="file" name="titleMainImagePath" id="titleMainImagePath" />
                 <div>
                     <img class="img-block" src="~/images/@Model.TitleMainImagePath" />
@@ -56,13 +81,13 @@
                 <p class="text-danger">
                     @ViewBag.SecondImageFormatError
                 </p>
-                <label asp-for="TitleSecondImagePath"></label>
+                <label asp-for="TitleSecondImagePath">@SharedResource["SecondPhoto"]</label>
                 <input type="file" name="titleSecondImagePath" id="titleSecondImagePath" />
                 <div>
                     <img class="img-block" src="~/images/@Model.TitleSecondImagePath" />
                 </div>
             </div>
-            <div class="div-box">
+            @*<div class="div-box">
                 <label asp-for="MetaTitle"></label>
                 <input asp-for="MetaTitle" />
                 <span asp-validation-for="MetaTitle"></span>
@@ -76,7 +101,7 @@
                 <label asp-for="MetaKeywords"></label>
                 <input asp-for="MetaKeywords" />
                 <span asp-validation-for="MetaKeywords"></span>
-            </div>
+            </div>*@
             <input type="submit" value=@SharedResource["Save"] />
         </form>
     </div>
@@ -88,6 +113,8 @@
     window.onload = function() {
         var newCKEdit = CKEDITOR.replace('@Html.IdFor(x=>x.Text)');
         newCKEdit.updateElement();
+        var newCKEditGeo = CKEDITOR.replace('@Html.IdFor(x=>x.TextGeo)');
+        newCKEditGeo.updateElement();
     }
 </script>
 

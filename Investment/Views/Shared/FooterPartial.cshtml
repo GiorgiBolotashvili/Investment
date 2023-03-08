@@ -38,7 +38,7 @@
                         var viewContext = Html.ViewContext;
                         var httpContext = viewContext.HttpContext;
                     }
-                    <label for="language-select">Select language:</label>
+                    <label for="language-select">@SharedResource["Language"]:</label>
                     <a asp-controller="Language" asp-action="SetLanguage" asp-route-culture="en-US" asp-route-returnUrl=@httpContext.Request.Path>
                         <img src="~/images/gb.svg" alt="" title="" border="0" width="16" height="16"/>
                     </a>
@@ -52,7 +52,7 @@
         <div class="row">
             <div class="col-12">
                 <div id="copyright">
-                    &copy; @Config.CompanyName. All rights reserved. | Georgia:      <a href="http://html5up.net">@Config.CompanyName</a>
+                    &copy; @SharedResource["CompName"]. All rights reserved. | Georgia:      <a href="http://html5up.net">@SharedResource["CompName"]</a>
                 </div>
             </div>
         </div>

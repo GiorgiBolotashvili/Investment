@@ -24,10 +24,10 @@ namespace Investment.Domain.Entities
         [Required]
         public string CodeWord { get; set; }
 
-        [Display(Name = "დასახელება (თავსართი)")]
-        public override string Title { get; set; } = "საინფორმაციო გვერდი";
+        [Display(Name = "Name (Title)")]
+        public override string Title { get; set; } = "Information page";
 
-        [Display(Name = "სრული აღწერა")]
-        public override string Text { get; set; } = "ინფორმაცია კომპანიის საქმიანობის შესახებ";
+        [Display(Name = "Full description")]
+        public override string Text { get; set; } = "Information about the company's activities";
     }
 }
